@@ -2,6 +2,7 @@ package models;
 
 public class Product {
 
+    private String productType;
     private String departament;
     private String city;
     private String subtype;
@@ -11,8 +12,9 @@ public class Product {
     private String quantity;
     private String observations;
 
-    public Product(String departament, String city, String subtype, String productName, String reference,
+    public Product(String productType, String departament, String city, String subtype, String productName, String reference,
             String supplier, String quantity, String observations) {
+        this.productType = productType;
         this.departament = departament;
         this.city = city;
         this.subtype = subtype;
@@ -23,8 +25,9 @@ public class Product {
         this.observations = observations;
     }
 
-    public Product(String departament, String city, String subtype, String productName, String supplier, 
+    public Product(String productType, String departament, String city, String subtype, String productName, String supplier, 
             String quantity, String observations) {
+        this.productType = productType;
         this.departament = departament;
         this.city = city;
         this.subtype = subtype;
@@ -34,6 +37,14 @@ public class Product {
         this.observations = observations;
     }
     
+    public String getProductType() {
+        return productType;
+    }
+
+    public void setProductType(String productType) {
+        this.productType = productType;
+    }
+
     public String getDepartament() {
         return departament;
     }
