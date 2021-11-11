@@ -44,7 +44,7 @@ public class WriteReport {
                     XSSFCell cell = row.createCell(j);
                     if(!isDigit(data.get(i-1).get(j))) {
                         cell.setCellValue(data.get(i-1).get(j));//Se añade el contenido
-                    }else if (isDigit(data.get(i-1).get(j))) {
+                    }else if (isDigit(data.get(i-1).get(j)) && !data.get(i-1).get(j).equals("")) {
                         cell.setCellValue(Double.parseDouble(data.get(i-1).get(j)));//Se añade el contenido
                     }
                 }
